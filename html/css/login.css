@@ -1,0 +1,182 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background-color: rgb(29, 28, 28);
+}
+
+.container-pai {
+  display: flex;
+  margin: 10% 15%;
+  width: 1400px;
+}
+
+.container {
+  background: white;
+  border-radius: 11px;
+  float: left;
+}
+
+img {
+  width: 100%;
+  display: block;
+}
+
+.container h1 {
+  text-align: center;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.container-form {
+  width: 40%;
+  float: right;
+  background: gray;
+  border-radius: 11px;
+}
+
+.form {
+  width: 60%;
+  margin-top: 30px;
+  margin: 80px auto;
+  padding: 10px;
+  padding-right: 40px;
+
+  background: #2f3136;
+  color: white;
+  border-radius: 33px;
+}
+
+.form h1 {
+  margin: auto 140px;
+  margin-bottom: 40px;
+}
+
+.form label {
+  display: block;
+  text-align: left;
+  font-size: 1.5em;
+}
+
+.form label,
+input {
+  text-align: left;
+  margin-left: 20px;
+}
+
+.form input {
+  border: 15px solid gray;
+  border-radius: 11px;
+  width: 88%;
+  padding: 14px 0;
+  font-size: 1.2em;
+}
+
+#password {
+  margin-top: 6%;
+}
+
+.form p {
+  margin: 20px;
+  text-align: right;
+}
+.form p a {
+  font-size: 1.2em;
+  text-decoration: none;
+  color: rgb(155, 155, 155);
+}
+
+.form p a:hover {
+  color: white;
+}
+
+.form button {
+  font-size: 1.6em;
+  width: 10vw;
+  height: 6vh;
+  margin-top: 10%;
+  margin-left: 30%;
+  margin-bottom: 80px;
+  color: white;
+  border-radius: 11px;
+  background-color: rgb(155, 155, 155);
+}
+
+@media (max-width: 730px) {
+  .container {
+    display: none;
+  }
+
+  .container-pai {
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    padding-top: 20%;
+  }
+
+  .container-form {
+    width: 80%;
+
+    height: auto;
+    margin: 0 auto;
+  }
+
+  .form {
+    width: 70%;
+  }
+
+  .form h1 {
+    font-size: 3em;
+    margin: auto 140px;
+    margin-bottom: 40px;
+  }
+
+  .form label {
+    display: block;
+    text-align: left;
+    font-size: 2.1em;
+  }
+
+  .form label,
+  input {
+    text-align: left;
+    margin-left: 20px;
+  }
+
+  .form input {
+    border: 15px solid gray;
+    border-radius: 11px;
+    width: 90%;
+
+    font-size: 1.2em;
+  }
+
+  .form p {
+    margin: 20px;
+    text-align: right;
+  }
+  .form p a {
+    font-size: 1.2em;
+    text-decoration: none;
+    color: rgb(155, 155, 155);
+  }
+
+  .form p a:hover {
+    color: white;
+  }
+
+  .form button {
+    font-size: 1.1em;
+    width: 190px;
+    height: 50px;
+    margin-top: 30px;
+    margin-left: 110px;
+    margin-bottom: 80px;
+    color: white;
+    border-radius: 11px;
+    background-color: rgb(155, 155, 155);
+  }
+}
