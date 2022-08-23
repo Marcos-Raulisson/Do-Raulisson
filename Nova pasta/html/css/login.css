@@ -1,0 +1,96 @@
+:root {
+  --color-white: #ffff;
+  --color-gray: #2f3136;
+  --color-section: #2f3136;
+  --color-background: #202225;
+  --color-backgroundBody: #36393f;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--color-gray);
+  font-family: "Inter", sans-serif;
+}
+
+.container {
+  max-width: 70%;
+  margin: 5rem auto;
+  display: flex;
+}
+
+.capa {
+  border-top-left-radius: 11px;
+  border-bottom-left-radius: 11px;
+  background: var(--color-white);
+  text-align: center;
+}
+
+.capa img {
+  position: relative;
+  width: 80%;
+}
+
+.login {
+  border-top-right-radius: 11px;
+  border-bottom-right-radius: 11px;
+  background: var(--color-backgroundBody);
+  color: white;
+  min-width: 20rem;
+  min-height: 30rem;
+  float: right;
+}
+
+.form h1 {
+  padding-top: 1rem;
+  text-align: center;
+}
+
+.form {
+  background: var(--color-gray);
+  max-width: 17vw;
+  margin: auto 1.5rem;
+  border-radius: 9px;
+}
+
+form {
+  margin-left: 13%;
+}
+
+input {
+  margin-bottom: 9%;
+  max-width: 80%;
+}
+
+.form form a {
+  text-decoration: none;
+  color: rgb(170, 170, 170);
+  font-size: 0.7rem;
+  float: right;
+  margin-right: 2rem;
+}
+
+.form form a:hover {
+  color: #ffff;
+}
+
+.form button {
+  margin: 1.5rem 3.8rem;
+  min-width: 8vw;
+  font-size: 1.2rem;
+  border-radius: 9px;
+  border: 3px rgb(170, 170, 170) solid;
+}
+
+.form button:hover {
+  background: rgb(66, 48, 146);
+  color: #ffff;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .capa {
+    display: none;
+  }
+}
