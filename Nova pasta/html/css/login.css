@@ -33,66 +33,77 @@
 body {
   background: linear-gradient(-45deg, #3f51b1 0%, #5a55ae 13%, #7b5fac 25%, #8f6aae 38%, #a86aa4 50%, #cc6b8e 62%, #f18271 75%, #f3a469 87%, #f7c978 100%);;
   background-size: 400% 400%;
-  position: relative;
   animation: animate 7.5s ease-in-out infinite;
-  display: flex;
-  justify-content: center;
+  display: grid;
+  justify-items: center;
   align-items: center;
-  
   font-family: "Inter", sans-serif;
 }
 
 .container{
-  margin-top:8vw ;
-  width: 1000px;
-  height: 520px;
-  display: flex;
-  justify-content: center;
+  margin-top: 7%;
+  width: 60%;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  justify-items: center;
   align-items: center;
 }
 
 .capa {
+  position: relative;  
   border-top-left-radius: 11px;
   border-bottom-left-radius: 11px;
   background: var(--color-white);
   text-align: center;
   width: 100%;
+  height: 66vh;
 }
 
 .capa img {
-  position: relative;
-  width: 92%;
+  width: 100%;
+  height: 60vh;
+  
 }
 
 .login {
-  display: grid;
-  grid-template-rows: 7fr;
+  width: 100%;
+  height: 100%;
   border-top-right-radius: 11px;
   border-bottom-right-radius: 11px;
   background: rgba(255, 255, 255, 0.17);
   color: white;
-  width: 40%;
+  display: grid;
+  
+}
+
+.form{
+
+  display: grid;
+  grid-template-rows: 17vh 22vh 14vh;
   height: 100%;
-  float: right;
+  justify-items: center;
+  align-items: center;
 }
 
 .form h1 {
-  padding-top: 5rem;
-  text-align: center;
   font-size: 2.4rem;
 }
 
 
 
 form {
-  margin-top:50px ;
-  margin-left:2.3rem;
-  width:200px;
+  width:15vw;
+  height: 15vh;
   align-items: center;
+}
+
+label{
+  font-size: 1.1rem;
 }
 
 input {
   width: 100%;
+  height: 3vh;
 }
 
 form a {
@@ -106,11 +117,8 @@ form a {
 }
 
 .form .botao {
-  margin-top: 30px;
-  margin-left:80px ;
-  width: 130px;
-  height: 40px;
-  flex-direction: row;
+  width: 8rem;
+  height: 3rem;
   font-size: 1.2rem;
   border-radius: 9px;
   border: 3px rgb(170, 170, 170) solid;
@@ -122,15 +130,42 @@ form a {
   cursor: pointer;
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 925px) {
   .capa {
     display: none;
   }
+
+  .container {
+    margin-top: 15vh;
+    width: min-content;
+  }
+
   .login {
-    margin-top: 150px;
-    min-width: 300px;
-    min-height: 500px;
+    width: 45vw;
+    height: 65vh;
     border-radius: 11px;
   }
+
+  form {
+    width:30vw;
+  }
+
+  input{
+    height: 2rem;
+  }
   
+}
+
+@media (max-width: 430px){
+  .login{
+    min-width: 70vw;
+  }
+
+  form{
+    width: 50vw;
+  }
+
+  input{
+    height: 1.5rem;
+  }
 }
