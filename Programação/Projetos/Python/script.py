@@ -1,32 +1,30 @@
-def calcular_imc(peso, altura):
-    # Calcula o IMC
-    imc = peso / (altura ** 2)
-    return imc
+def cadastro():
+    nome_completo = input('Digite seu nome completo:')
+    usuario = input('Digite seu nome de usuário:')
+    senha = input('Digite sua senha:')
+    return login()
 
 
-def interpretar_imc(imc):
-    # Interpreta o IMC e retorna uma mensagem
-    if imc < 18.5:
-        return "Abaixo do peso"
-    elif imc < 25:
-        return "Peso normal"
-    elif imc < 30:
-        return "Sobrepeso"
+def login():
+    user = input('Usuário: ')
+    password = input('Senha: ')
+    print('Você entrou')
+
+
+def inicio():
+    print('Seja bem vindo ao Banco do Raulisson. Você tem uma conta?')
+    escolha1 = input()
+    if escolha1 == 'y':
+        return login()
     else:
-        return "Obeso"
+        return cadastro()
 
 
-# Solicita os dados de peso e altura ao usuário
-peso = float(input("Digite o peso em kg: "))
-# Adicionar valor em metros (Ex: 1.83)
-altura = float(input("Digite a altura em metros: "))
+inicio()
 
-# Chama a função para calcular o IMC
-imc = calcular_imc(peso, altura)
+# requisições
 
-# Interpreta o IMC
-resultado = interpretar_imc(imc)
 
-# Exibe o resultado
-print("O seu IMC é:", imc)
-print("Classificação:", resultado)
+def require():
+    user = {}
+    password = {}
