@@ -1,50 +1,59 @@
+from getpass import getpass
+import os
 
-def inicio():
-    def login():
+user_registrado = ['admin']
+password_registrado = ['admin']
+
+while True:
+
+    print('Seja bem vindo ao Banco Central')
+    i = input('Tecle:\n'
+              '[E] - Entrar\n'
+              '[C] - Cadastrar\n'
+              '[X]- Sair: ').upper()
+
+    if i == 'E':
+        print('Por favor insira seu usuário!')
+
         user_digitado = input('Usuário: ')
-        password_digitado = input('Senha: ')
+        password_digitado = getpass('Senha: ')
 
-        password_permitida = user_digitado
-        user_permitido = password_digitado
-
-        if user_digitado in user_permitido and password_digitado == password_permitida:
+        while user_digitado in user_registrado and password_digitado in password_registrado:
+            os.system('clear')
             print('Você entrou')
+            saldo = 1000
+            credito = 1000
+
+            i = input('Deseja fazer alguma opção?\n'
+                      '[S] - Para ver o saldo\n'
+                      '[C] - Para ver o crédito\n'
+                      '[T] - Para fazer transferência: ').upper()
+
+            if i == 'S':
+                print(f'Seu saldo está no valor total de:{saldo}')
+                break
+            elif i == 'C':
+                print(f'Seu crédito está no valor total de:{credito}')
+                break
+            elif i == 'T':
+                print('Vou fazer a transferência!')
+                break
+            else:
+                print('Nenhuma opção selecionada')
+                break
         else:
-            print('Usuário incorreto')
-        return inicio()
+            print('Usuário ou senha incorreta')
 
-    def cadastro():
-        nome_completo = input('Digite seu nome completo:')
-        usuario = input('Digite seu nome de usuário:')
-        senha = input('Digite sua senha:')
+    elif i == 'C':
+        print('Vamos começar o seu cadastro')
+        usuario = input('Digite um NOVO usuário: ')
+        senha = getpass('Digite uma NOVA senha: ')
 
-        novo_user = (nome_completo, usuario, senha)
-        print('Você cadastrou um novo usuário')
-        return login()
-
-    entrada = input(
-        'Seja bem vindo ao Banco do Raulisson. Você tem uma conta?[S]im ou [N]ão?')
-    if entrada == 'S' or entrada == 's':
-        print('Faça o login')
-        return login()
-
-    elif entrada == 'N' or entrada == 'n':
-        print('Você não entrou')
-        entrada = input(
-            'Usuário ou senha incorreto. Deseja cadastrar novo usuário?[S]im ou [N]ão?')
-
-        if entrada == 'S' or entrada == 's':
-            return cadastro()
+        user_registrado.append(usuario)
+        password_registrado.append(senha)
+        os.system('clear')
+        print('NOVO USUÁRIO CADASTRADO!')
+        continue
     else:
-        print('Nenhuma opção selecionada!')
-        return inicio()
-
-
-inicio()
-
-# requisições
-
-
-def require():
-    user = {}
-    password = {}
+        print('Volte sempre!')
+        break
