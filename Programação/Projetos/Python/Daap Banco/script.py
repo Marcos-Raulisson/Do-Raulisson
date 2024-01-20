@@ -57,7 +57,13 @@
 #     else:
 #         print('Volte sempre!')
 #         break
-def my_function(*kids):
-  print("The youngest child is " + kids[2])
+user = [{
+    'user': input('Digite um usuário: '),
+    'password': input('Digite uma senha: ')
+}]
 
-my_function("Emil", "Tobias", "Linus")
+def mostrar_tela(args):
+    print(args.values())
+
+bd = [vars(user)]
+print(bd)

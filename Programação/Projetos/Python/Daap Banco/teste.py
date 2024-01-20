@@ -41,10 +41,10 @@ def validacao():
                         '[N] - Nova conta: ').upper()
 
         if escolha == 'T':
-            os.system('cls')
+            os.system('clear')
             return login()
         else:
-            os.system('cls')
+            os.system('clear')
             return cadastro()
 
 
@@ -53,7 +53,7 @@ def login():
     # Insere e valida se o usuário está cadastrado no 'banco'
     usuario['user'] = input('Digite seu usuário: ')
     usuario['password'] = getpass('Digite sua senha: ')
-    os.system('cls')
+    os.system('clear')
     return validacao()
 
 
@@ -65,15 +65,15 @@ while True:
                     '[S] - Sair: \n').upper()
 
     if escolha == 'E':
-        os.system('cls')
+        os.system('clear')
         login()
     elif escolha == 'C':
-        os.system('cls')
+        os.system('clear')
         cadastro()
     elif escolha == 'S':
-        os.system('cls')
+        os.system('clear')
         print('Volte sempre!\n')
         break
     else:
-        os.system('cls')
+        os.system('clear')
         print('Opção incorreta, tente outra vez\n')
