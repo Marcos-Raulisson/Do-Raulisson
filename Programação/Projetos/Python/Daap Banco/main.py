@@ -1,7 +1,9 @@
 import json
 import os
+import pytest
 
 CAMINHO_ARQUIVO = 'mini_banco_dados.json'
+
 
 class Cadastro:
     def __init__(self):
@@ -9,7 +11,7 @@ class Cadastro:
         self.new_password = input('Digite uma nova senha: ')
         os.system('clear')
         print('Usuário cadastrado com sucesso!')
-    
+
     def save_log(self):
         bd = [vars(self)]  # Use 'self' para referenciar a instância atual
 
@@ -17,6 +19,7 @@ class Cadastro:
             if arquivo.tell() > 0:
                 arquivo.write('\n')
             json.dump(bd, arquivo, indent=2, ensure_ascii=False)
+
 
 def login():
     user_input = input('Digite seu usuário: ')
@@ -34,6 +37,7 @@ def login():
             return True  # Retorna True se o login for bem-sucedido
     print('Usuário ou senha incorretos.')
     return False  # Retorna False se o login falhar
+
 
 if __name__ == '__main__':
     while True:
@@ -58,5 +62,3 @@ if __name__ == '__main__':
         else:
             os.system('clear')
             print('Opção incorreta, tente outra vez\n')
-   
-    
