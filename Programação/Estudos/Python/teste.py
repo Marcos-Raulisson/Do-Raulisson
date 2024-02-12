@@ -1,6 +1,8 @@
-# Classe teste
-class teste():
+import matplotlib.pyplot as plt
+import numpy as np
 
-    # Método de multiplicação da classe teste
-    def metodo_multiplicacao(self, a, b):
-        return a * b
+xpoints = np.array([1, 6])
+ypoints = np.array([f'janeiro', 'fevereiro', 'março'])
+
+plt.plot(xpoints, ypoints)
+plt.show()
